@@ -2,33 +2,11 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
     <af:document title="AutoComplete.jsf" id="d1">
-        <!--af:resource type="javascript">
-          function onBlur(event) {
-              console.log(event);
-              /*var comp = event.getSource();
-              var element = document.getElementById(comp.getClientId() + '::content');
-              element.focus();
-              var value = element.value;
-              console.log(value);
-              element.setSelectionRange(value.length, value.length);
-              event.cancel();*/
-          }
-          function onFocus(event) {
-              console.log(event);
-              var comp = event.getSource();
-              var element = document.getElementById(comp.getClientId() + '::content');
-              element.focus();
-              var value = element.value;
-              console.log(value);
-              element.setSelectionRange(value.length, value.length);
-          }
-        </af:resource-->
         <af:form id="f1">
             <af:inputText label="AutoComplete" value="#{viewScope.AutoCompleteBean.value}" id="it1" autoSubmit="true"
-                          converter="view.StringConverter">
+                          valueChangeListener="#{viewScope.AutoCompleteBean.valueChangeListener}">
                 <af:autoSuggestBehavior suggestItems="#{viewScope.AutoCompleteBean.suggestItems}"/>
-                <af:target render="it1" execute="@this"/>
-                <!--af:clientListener type="focus" method="onFocus"/-->
+                <!--af:target render="it1" execute="@this"/-->
             </af:inputText>
         </af:form>
     </af:document>

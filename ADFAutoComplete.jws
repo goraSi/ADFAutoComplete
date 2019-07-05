@@ -4,7 +4,7 @@
       <value n="adrs-instance-binding" v="DefaultServer"/>
    </hash>
    <hash n="adrs-workspace-weblogic-properties">
-      <value n="hot-class-reload" v="fast-swap"/>
+      <value n="hot-class-reload" v="ide-default"/>
    </hash>
    <value n="appTemplateId" v="adfWebappApplicationTemplate"/>
    <hash n="component-versions">
